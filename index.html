@@ -18,7 +18,16 @@
             background: linear-gradient(90deg, rgba(255, 69, 58, 1) 20%, rgba(153, 50, 204, 1) 100%);
             color: white;
             padding: 20px;
-            text-align: center;
+            text-align: center-10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        header img {
+            width: 150px;
+            height: 150px;
+
         }
 
         header h1 {
@@ -89,6 +98,7 @@
             opacity: 1;
             transform: translateY(0);
         }
+
 		.feature-box h3 {
             font-size: 1.8rem;
             margin-bottom: 10px;
@@ -150,8 +160,11 @@
 <body>
 
 <header>
-    <h1>Astro OS</h1>
-    <p>Debian based desktop Operating System</p>
+    <img src="https://github.com/astro-deb/astro-deb.github.io/blob/main/AstroLogo-NB.png?raw=true" alt="Tlqkf">
+    <div>
+        <h1>Astro OS</h1>
+        <p>Debian based desktop Operating System</p>
+    </div>
 </header>
 
 <nav>
