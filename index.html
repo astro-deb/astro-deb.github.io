@@ -4,196 +4,188 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta property="og:image" content="https://github.com/astro-deb/astro-deb.github.io/blob/main/AstroHBanner-ND.png?raw=true">
-    <meta property="og:title" content="Astro OS - Debian based Operating System">
-    <meta property="og:description" content="Meet a stable and beautiful operating system based on Debian.">
+    <meta property="og:title" content="Astro OS - Debian based penetration testing Operating System">
+    <meta property="og:description" content="Meet a stable penetration testing operating system based on Debian.">
     <meta property="og:url" content="https://astro-deb.github.io">
-    <title>Astro OS - Debian based Operating System</title>
+    <title>Astro OS - Debian based penetration testing Operating System</title>
     <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            background-color: white;
-            margin: 0;
-            padding: 0;
-            color: #333;
-        }
+      body {
+          font-family: 'Arial', sans-serif;
+          background-color: #121212;
+          margin: 0;
+          padding: 0;
+          color: #f1f1f1;
+      }
 
-        header {
-            background: linear-gradient(90deg, rgba(255, 69, 58, 1) 20%, rgba(153, 50, 204, 1) 100%);
-            color: white;
-            padding: 20px;
-            text-align: center-10px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
+      header {
+          background: url('https://github.com/astro-deb/astro-deb.github.io/blob/main/AstroHBanner-ND.png?raw=true') center center / cover no-repeat;
+          color: white;
+          padding: 40px 20px;
+          text-align: center;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-direction: column;
+      }
 
-        header img {
-            width: 150px;
-            height: 150px;
-        }
+      header img {
+          width: 150px;
+          height: 150px;
+      }
 
-        header h1 {
-            font-size: 3rem;
-            font-weight: bold;
-            margin: 0;
-        }
+      header h1 {
+          font-size: 3rem;
+          font-weight: bold;
+          margin: 10px 0 0 0;
+      }
 
-        header p {
-            font-size: 1.2rem;
-            margin-top: 10px;
-        }
+      header p {
+          font-size: 1.2rem;
+          margin-top: 10px;
+      }
 
-        nav {
-            margin-top: 20px;
-            text-align: center;
-        }
+      nav {
+          margin-top: 20px;
+          text-align: center;
+          background-color: rgb(25,25,25);
+      }
 
-        nav a {
-            font-size: 1rem;
-            color: #333;
-            margin: 0 15px;
-            text-decoration: none;
-        }
+      nav a {
+          font-size: 1rem;
+          color: #bbb;
+          margin: 0 15px;
+          text-decoration: none;
+      }
 
-        nav a:hover {
-            color: rgba(153, 50, 204, 1);
-        }
+      nav a:hover {
+          color: rgb(255,255,255);
+      }
 
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 40px 20px;
-            text-align: center;
-            position: relative;
-        }
+      .container {
+          max-width: 1200px;
+          margin: 0 auto;
+          padding: 40px 20px;
+          text-align: center;
+      }
 
-        .container h2 {
-            font-size: 2.5rem;
-            margin-bottom: 20px;
-            color: rgba(255, 69, 58, 1);
-        }
+      .container h2 {
+          font-size: 2.5rem;
+          margin-bottom: 20px;
+          color: rgb(200,200,200);
+      }
 
-        .container p {
-            font-size: 1.2rem;
-            margin-bottom: 40px;
-        }
+      .container p {
+          font-size: 1.2rem;
+          margin-bottom: 40px;
+          color: #ccc;
+      }
 
-        .features {
-            display: flex;
-            justify-content: space-around;
-            flex-wrap: wrap;
-            gap: 20px;
-            position: relative;
-            z-index: 1;
-        }
+      .features {
+          display: flex;
+          justify-content: space-around;
+          flex-wrap: wrap;
+          gap: 20px;
+      }
 
-        .feature-box {
-            background-color: rgba(255, 255, 255, 1);
-            border-radius: 10px;
-            padding: 20px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            width: 30%;
-            margin-bottom: 20px;
-            opacity: 0;
-            transform: translateY(30px);
-            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-        }
+      .feature-box {
+          background-color: rgb(20,20,20);
+          border-radius: 10px;
+          padding: 20px;
+          box-shadow: 0 0px 20px rgba(65, 105, 225, 0.5);
+          width: 30%;
+          margin-bottom: 20px;
+          opacity: 0;
+          transform: translateY(30px);
+          transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+      }
 
-        .feature-box.show {
-            opacity: 1;
-            transform: translateY(0);
-        }
+      .feature-box.show {
+          opacity: 1;
+          transform: translateY(0);
+      }
 
-		.feature-box h3 {
-            font-size: 1.8rem;
-            margin-bottom: 10px;
-            color: rgba(153, 50, 204, 1);
-        }
+      .feature-box h3 {
+          font-size: 1.8rem;
+          margin-bottom: 10px;
+          color: rgb(255,255,255);
+      }
 
-        .download-section {
-            background: linear-gradient(90deg, rgba(255, 69, 58, 0.05) 20%, rgba(153, 50, 204, 0.05) 100%);
-            padding: 50px 0;
-            text-align: center;
-            opacity: 0;
-            transform: translateY(30px);
-            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-        }
+      .feature-box p {
+          color: #ddd;
+      }
 
-        .download-section.show {
-            opacity: 1;
-            transform: translateY(0);
-        }
+      .download-section {
+          background-color: #1e1e1e;
+          padding: 50px 0;
+          text-align: center;
+          opacity: 0;
+          transform: translateY(30px);
+          transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+      }
 
-        .download-section h2 {
-            font-size: 2.5rem;
-            margin-bottom: 20px;
-            color: rgba(255, 69, 58, 0.8);
-        }
+      .download-section.show {
+          opacity: 1;
+          transform: translateY(0);
+      }
 
-        .download-btn {
-            background-color: rgba(153, 50, 204, 1);
-            color: white;
-            padding: 15px 30px;
-            font-size: 1.2rem;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            text-decoration: none;
-        }
+      .download-section h2 {
+          font-size: 2.5rem;
+          margin-bottom: 20px;
+          color: rgb(255,255,255);
+      }
 
-        .download-btn:hover {
-            background-color: rgba(153, 50, 204, 0.8);
-        }
+      .download-btn {
+          background-color: rgba(65, 105, 225, 1);
+          color: white;
+          padding: 15px 30px;
+          font-size: 1.2rem;
+          border: none;
+          border-radius: 5px;
+          cursor: pointer;
+          text-decoration: none;
+      }
 
-        .astro-api-img {
-            position: absolute;
-            top: -10px;|
-            left: 50%;
-            transform: translateX(-50%);
-            width: 900px;
-            height: 900px;
-        }
+      .download-btn:hover {
+          background-color: rgba(65, 105, 225, 0.5);
+      }
 
-        footer {
-            background: linear-gradient(90deg, rgba(255, 69, 58, 0.05) 20%, rgba(153, 50, 204, 0.05) 100%);
-            padding: 30px 0;
-            text-align: center;
-            color: #555;
-        }
+      footer {
+          background-color: #1a1a1a;
+          padding: 30px 0;
+          text-align: center;
+          color: #888;
+      }
 
-        footer a {
-            color: rgba(153, 50, 204, 1);
-            text-decoration: none;
-            margin: 0 10px;
-        }
+      footer a {
+          color: rgba(65, 105, 225, 0.7);
+          text-decoration: none;
+          margin: 0 10px;
+      }
 
-        footer a:hover {
-            color: rgba(255, 69, 58, 1);
-        }
-    </style>
+      footer a:hover {
+          color: rgba(65, 105, 225, 0.5);
+      }
+  </style>
 </head>
 <body>
 
 <header>
-    <img src="https://github.com/astro-deb/astro-deb.github.io/blob/main/AstroLogo-W.png?raw=true" alt="Astro OS Logo">
-    <div>
-        <h1>Astro OS</h1>
-        <p>Debian based desktop Operating System</p>
-    </div>
+	<br>
+	<br>
+	<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+	<nav>
+      <a href="#">Home</a>
+      <a href="#">Features</a>
+      <a href="#">Download</a>
+      <a href="#">Support</a>
+      <a href="#">About</a>
+	</nav>
 </header>
-
-<nav>
-    <a href="#">Home</a>
-    <a href="#">Features</a>
-    <a href="#">Download</a>
-    <a href="#">Support</a>
-    <a href="#">About</a>
-</nav>
 </br>
 </br>
 <div class="container">
     <h2>Designed for you</h2>
-    <p>Meet a stable and beautiful operating system based on Debian.</p>
+    <p>Meet a stable penetration testing operating system based on Debian.</p>
 
     <div class="features">
         <div class="feature-box">
@@ -202,7 +194,7 @@
         </div>
         <div class="feature-box">
             <h3>Security</h3>
-            <p>Built on a secure Linux kernel and using Space Secure Protocol (SSP). AstroOS protects your data and privacy.</p>
+            <p>Built on a secure Linux kernel and Only use RAM as storage device. AstroOS protects your data and privacy.</p>
         </div>
         <div class="feature-box">
             <h3>Customizability</h3>
@@ -216,7 +208,7 @@
     <a href="#" class="download-btn">astro1.0.2-deb12.iso</a>
 </div>
 <footer>
-    <p>© 2024 Astro OS  | <a href="#">Privacy Policy</a> | <a href="#">Contact</a> | <a href="#">Community</a> | <a href="#">Team</a></p>
+    <p>© 2025 Astro OS  | <a href="#">Privacy Policy</a> | <a href="#">Contact</a> | <a href="#">Community</a> | <a href="#">Team</a></p>
 </footer>
 
 <script>
